@@ -1,0 +1,31 @@
+# SwarmSync Documentation
+
+## Overview
+SwarmSync is an RF-based multi-node communication system for UAVs.
+Built using ESP32 and NRF24L01 modules.
+
+## Hardware Required
+- ESP32 Development Board (x2 or more)
+- NRF24L01 RF Module (x2 or more)
+- Jumper wires
+- Power supply (3.3V/5V)
+
+## Pin Connections (ESP32 ↔ NRF24L01)
+| NRF24L01 | ESP32 |
+|----------|-------|
+| VCC      | 3.3V  |
+| GND      | GND   |
+| CE       | GPIO4 |
+| CSN      | GPIO5 |
+| SCK      | GPIO18|
+| MOSI     | GPIO23|
+| MISO     | GPIO19|
+
+## Working Principle
+Master ESP32 sends commands via RF.
+Slave nodes receive and execute commands.
+No internet required — fully offline.
+
+## Future Goals
+- Multi-UAV swarm coordination
+- Autonomous flight path syncing
